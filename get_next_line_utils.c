@@ -6,11 +6,11 @@
 /*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:55:39 by musisman          #+#    #+#             */
-/*   Updated: 2024/12/02 14:41:52 by musisman         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:54:24 by musisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_h"
+#include "get_next_line.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char *s, char *buffer) // daha iyi bir kod olabilir belki incele
+char	*ft_strjoin(char *s, char *buffer)
 {
 	char	*a;
 	size_t	i;
@@ -31,21 +31,21 @@ char	*ft_strjoin(char *s, char *buffer) // daha iyi bir kod olabilir belki incel
 	if (!s)
 	{
 		s = malloc(1);
-		s[0]  = '\0';
+		s[0] = '\0';
 	}
 	a = malloc(ft_strlen(s) + ft_strlen(buffer) + 1);
-if (a == NULL)
+	if (a == NULL)
 		return (NULL);
-i = 0;
-j = 0;
-while (s[j])
-{
+	i = 0;
+	j = 0;
+	while (s[j])
+	{
 		a[j] = s[j];
 		j++;
 	}
 	while (buffer[i])
 		a[j++] = buffer[i++];
-	res[ft_strlen(s) + ft_strlen(buffer)] = '\0';
+	a[ft_strlen(s) + ft_strlen(buffer)] = '\0';
 	free(s);
 	return (a);
 }
@@ -55,8 +55,8 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 	size_t	len;
 
-// if (!str)
-return (NULL);
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	while (i <= len)
@@ -68,11 +68,11 @@ return (NULL);
 	return (0);
 }
 
-char *line_s(char *s)
+char	*line_s(char *s)
 {
-	size_t i;
-	char *ptr;
-	
+	char	*ptr;
+	size_t	i;
+
 	i = 0;
 	if (!s[i])
 		return (NULL);
@@ -96,11 +96,11 @@ char *line_s(char *s)
 	return (ptr);
 }
 
-char *ft_new(char *s)
+char	*ft_new(char *s)
 {
-	char *a;
-	int i;
-	int j;
+	char	*a;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -111,13 +111,13 @@ char *ft_new(char *s)
 		free(s);
 		return (NULL);
 	}
-	a  = malloc(ft_strlen(s) - i + 1);
+	a = malloc(ft_strlen(s) - i + 1);
 	if (!a)
-		return (NULL)
+		return (NULL);
 	i++;
-	while(s[i])
-		a[j++] = s[j++];
+	while (s[i])
+		a[j++] = s[i++];
 	a[j] = '\0';
 	free(s);
-	return(a);
+	return (a);
 }

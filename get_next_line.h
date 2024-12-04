@@ -6,7 +6,7 @@
 /*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:54:34 by musisman          #+#    #+#             */
-/*   Updated: 2024/12/02 14:14:43 by musisman         ###   ########.fr       */
+/*   Updated: 2024/12/05 01:45:06 by musisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 
 # endif
 
-char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char *s, char *buffer)
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char *s, char *buffer);
+char	*ft_strchr(const char *s, int c);
 char	*line_s(char *s);
 char	*ft_new(char *s);
+char	*get_next_line(int fd);
 
 #endif
