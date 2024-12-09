@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
+/*   By: musisman <musisman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:52:44 by musisman          #+#    #+#             */
-/*   Updated: 2024/12/05 01:52:40 by musisman         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:49:01 by musisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_bufferstr(int fd, char *s)
+char	*ft_buffer_s(int fd, char *s)
 {
 	char	*buffer;
 	int		b;
@@ -44,10 +44,10 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 && BUFFER_SIZE < 1)
 		return (NULL);
-	s = ft_bufferstr(fd, s);
+	s = ft_buffer_s(fd, s);
 	if (!s)
 		return (NULL);
-	ptr = line_s(s);
-	s = ft_new(s);
+	ptr = ft_line_s(s);
+	s = ft_new_line_s(s);
 	return (ptr);
 }
