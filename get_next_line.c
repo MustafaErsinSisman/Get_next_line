@@ -6,11 +6,31 @@
 /*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:52:44 by musisman          #+#    #+#             */
-/*   Updated: 2024/12/05 01:52:40 by musisman         ###   ########.fr       */
+/*   Updated: 2024/12/17 12:22:33 by musisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+int	check(int b, char *s, char *buffer)
+{
+	if (b == -1)
+	{
+		free(buffer);
+		free(s);
+		return (0);
+	}
+	else if (b == 0)
+	{
+		if (!s || s[0] == '\0')
+		{
+			free(buffer);
+			free(s);
+			return (0);
+		}
+	}
+	return (1);
+}
 
 char	*ft_bufferstr(int fd, char *s)
 {
@@ -24,12 +44,8 @@ char	*ft_bufferstr(int fd, char *s)
 	while (ft_strchr(s, '\n') == 0 && b != 0)
 	{
 		b = read(fd, buffer, BUFFER_SIZE);
-		if (b == -1)
-		{
-			free(buffer);
-			free(s);
+		if (!check(b, s, buffer))
 			return (NULL);
-		}
 		buffer[b] = '\0';
 		s = ft_strjoin(s, buffer);
 	}
