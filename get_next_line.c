@@ -6,7 +6,7 @@
 /*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:52:44 by musisman          #+#    #+#             */
-/*   Updated: 2024/12/17 12:31:47 by musisman         ###   ########.fr       */
+/*   Updated: 2024/12/17 12:33:58 by musisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check(int b, char *s, char *buffer)
 	return (1);
 }
 
-char	*ft_bufferstr(int fd, char *s)
+char	*ft_buffer_s(int fd, char *s)
 {
 	char	*buffer;
 	int		b;
