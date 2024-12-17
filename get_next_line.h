@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
+/*   By: musisman <musisman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:54:34 by musisman          #+#    #+#             */
-/*   Updated: 2024/12/05 01:45:06 by musisman         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:48:43 by musisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 size_t	ft_strlen(const char *s);
 char	*ft_strjoin(char *s, char *buffer);
 char	*ft_strchr(const char *s, int c);
-char	*line_s(char *s);
-char	*ft_new(char *s);
+char	*ft_line_s(char *s);
+char	*ft_new_line_s(char *s);
 char	*get_next_line(int fd);
 
 #endif

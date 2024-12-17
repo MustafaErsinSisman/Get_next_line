@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
+/*   By: musisman <musisman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:52:44 by musisman          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/12/17 12:22:33 by musisman         ###   ########.fr       */
+=======
+/*   Updated: 2024/12/09 17:49:01 by musisman         ###   ########.fr       */
+>>>>>>> 37a9752b32aa6973cbe91a9cfa012d0f1f850081
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+<<<<<<< HEAD
 int	check(int b, char *s, char *buffer)
 {
 	if (b == -1)
@@ -33,6 +38,9 @@ int	check(int b, char *s, char *buffer)
 }
 
 char	*ft_bufferstr(int fd, char *s)
+=======
+char	*ft_buffer_s(int fd, char *s)
+>>>>>>> 37a9752b32aa6973cbe91a9cfa012d0f1f850081
 {
 	char	*buffer;
 	int		b;
@@ -60,10 +68,10 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 && BUFFER_SIZE < 1)
 		return (NULL);
-	s = ft_bufferstr(fd, s);
+	s = ft_buffer_s(fd, s);
 	if (!s)
 		return (NULL);
-	ptr = line_s(s);
-	s = ft_new(s);
+	ptr = ft_line_s(s);
+	s = ft_new_line_s(s);
 	return (ptr);
 }

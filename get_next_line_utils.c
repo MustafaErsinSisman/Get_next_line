@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: musisman <<musisman@student.42.fr>>        +#+  +:+       +#+        */
+/*   By: musisman <musisman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:55:39 by musisman          #+#    #+#             */
-/*   Updated: 2024/12/05 01:54:24 by musisman         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:49:47 by musisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-char	*line_s(char *s)
+char	*ft_line_s(char *s)
 {
 	char	*ptr;
 	size_t	i;
@@ -96,7 +96,7 @@ char	*line_s(char *s)
 	return (ptr);
 }
 
-char	*ft_new(char *s)
+char	*ft_new_line_s(char *s)
 {
 	char	*a;
 	int		i;
